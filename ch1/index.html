@@ -9,7 +9,14 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript">
-
+      const reactElement = React.createElement(
+        'h1',
+        { style: { color: 'blue', textAlign: 'center' } },
+        'Hello, React!'
+      );
+      const domNode = document.getElementById('root');
+      const root = ReactDOM.createRoot(domNode);
+      root.render(reactElement);  
     </script> 
   </body>
 </html>
