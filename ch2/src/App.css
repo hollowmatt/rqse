@@ -57,3 +57,11 @@ body {
   background-color: white;
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+.canvas {
+  position: fixed;
+  display: flex;
+  width: 75%;
+  height: 75%;border: 1px solid #525050d2;
+  margin: 1rem;
+}
