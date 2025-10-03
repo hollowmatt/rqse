@@ -1,34 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Menu />
+      <div className='content'>
+        <p>Content will go here</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p className="docs">
+        Read the docs to learn more.
       </p>
     </>
+  )
+}
+
+function Menu() {
+  return(
+    <nav className='navbar'>
+      <h1 className='title'>CapAid</h1>
+      <ul className='menu'>
+        <MenuItem name="Home" href="/" />
+        <MenuItem name="About" href="/about" />
+        <MenuItem name="Contact" href="/contact" />
+      </ul>
+    </nav>
+  );
+}
+
+function MenuItem(props) {
+  return(
+    <li className='menu-item'>
+      <a className='menu-link' href={props.href}>{props.name}</a>
+    </li> 
   )
 }
 
