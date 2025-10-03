@@ -20,17 +20,17 @@ function Menu() {
       <h1 className='title'>CapAid</h1>
       <ul className='menu'>
         <MenuItem name="Home" href="/" />
-        <MenuItem name="About" href="/about" />
-        <MenuItem name="Contact" href="/contact" />
+        <MenuItem name="About" href="/about" id="about-link"/>
+        <MenuItem name="Contact" href="/contact" target="_blank" id="contact-link"/>
       </ul>
     </nav>
   );
 }
 
-function MenuItem(props) {
+function MenuItem({name, href, ...rest}) {
   return(
     <li className='menu-item'>
-      <a className='menu-link' href={props.href}>{props.name}</a>
+      <a className='menu-link' href={href} {...rest}> {name} </a>
     </li> 
   )
 }
