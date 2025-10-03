@@ -40,13 +40,16 @@ function MenuItem({name, href, ...rest}) {
 
 function MyDiagram () {
   const nodes = [
-    { id: '1', label: 'Node 1', icon: 'https://reagraph.com/favicon.ico' },
-    { id: '2', label: 'Node 2' }
+    { id: '1', label: 'Construction', icon: '/yellow.svg' },
+    { id: '2', label: 'Machines', icon: '/blue.svg' },
+    { id: '3', label: 'Security', icon: '/purple.svg' },
+    { id: '4', label: 'Logical', icon: '/green.svg' },
   ];
 
   const edges = [
-    { source: '1', target: '2', id: '1-2', label: '1-2' }, 
-    { source: '2', target: '1', id: '2-1', label: '2-1' }
+    { source: '1', target: '2', id: '1-2' }, 
+    { source: '3', target: '2', id: '3-2' },
+    { source: '2', target: '4', id: '2-4' }
   ];
   return (
     <GraphCanvas nodes={nodes} edges={edges} />
