@@ -1,0 +1,6 @@
+#Ignore modules and build artifacts
+node_modules
+build
+.git
+.env
+.DS_Store
