@@ -1,4 +1,4 @@
 # Force Graph
 
 
-[Force Graph](https://vasturiano.github.io/)
+[Force Graph](https://github.com/vasturiano/force-graph)
